@@ -16,6 +16,7 @@ LIBFT	= ./Libft/libft.a
 # Source Files
 SRCS	= 	main.c \
 				init/env.c \
+				init/prompt.c \
 				debug/init_debug.c \
 				cleanup/free_misc.c \
 				# exec/exec.c

@@ -6,7 +6,7 @@
 /*   By: jockova <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 10:38:59 by jockova           #+#    #+#             */
-/*   Updated: 2025/06/18 11:47:37 by jockova          ###   ########.fr       */
+/*   Updated: 2025/06/18 14:45:06 by jockova          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct	s_envlst
 
 typedef struct	s_token
 {
-	char			*str;
+	char			*value;
 	int				type;
 	struct s_token	*prev;
 	struct s_token	*next;
@@ -64,9 +64,6 @@ typedef struct s_ms
 	t_envlst		*env_lst;
 	t_token			*token;
 	t_cmd			*cmd;
-	// int 			exit_code;
-	// int 			pip[2];
-	// bool 			sq;
 }	t_ms;
 
 // init/env.c
@@ -75,6 +72,8 @@ t_envlst	*env_lst_new(char *env_var);
 char		*cpy_left(char *env_var);
 char		*cpy_right(char *env_var);
 void		ft_lst_add_back(t_envlst **lst, t_envlst *new);
+// init/prompt.c
+void	prompt(t_ms *minishell);
 
 // cleanup/free_misc.c
 void		free_env_lst(t_envlst *head);

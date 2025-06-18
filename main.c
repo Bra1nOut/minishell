@@ -6,7 +6,7 @@
 /*   By: jockova <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 11:02:38 by jockova           #+#    #+#             */
-/*   Updated: 2025/06/18 13:04:31 by jockova          ###   ########.fr       */
+/*   Updated: 2025/06/18 14:52:21 by jockova          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,6 @@ void	ms_init(t_ms *ms, int argc, char **argv)
 
 int		main(int argc, char **argv, char **envp)
 {
-
-	// char *prompt = S_WHITE "minishell$ " S_RESET;
-	// readline(prompt);
-
 	// debug part:
 	// printf(RED "Program name, i. e. Argument n1: %s\n" RESET, argv[0]);
 	// printf("Length of the program name: \033[0;31m%zu\033[0m\n", ft_strlen(argv[0]));
@@ -47,11 +43,11 @@ int		main(int argc, char **argv, char **envp)
 	// ms_print_state(&ms); // debug function printing ms members
 	env_lst_make(&ms, envp);
 	// printf(RED "env_lst first key: %s\n" RESET, ms.env_lst->key); // debug control prints variables
-	ms_print_envlst(ms); // debug function
-	// printf(RED "freed" RESET); // debug control
-	// if (!env_lst_make(&ms, envp))
-	
+	// ms_print_envlst(ms); // debug function
+	prompt(&ms);
 
 	free_env_lst(ms.env_lst);
+	// printf(RED "freed" RESET); // debug control
+
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jockova <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 13:53:25 by jockova           #+#    #+#             */
-/*   Updated: 2025/06/17 14:46:36 by jockova          ###   ########.fr       */
+/*   Updated: 2025/06/18 14:51:25 by jockova          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,4 @@ void ms_print_state(t_ms *ms)
 	printf("  env_lst: %p\n", (void *)ms->env_lst);
 	printf("  token:   %p\n", (void *)ms->token);
 	printf("  cmd:     %p\n", (void *)ms->cmd);
-	// printf("  exit_code: %d\n", ms->exit_code);
-	// printf("  pip[0]: %d\n", ms->pip[0]);
-	// printf("  pip[1]: %d\n", ms->pip[1]);
-	// printf("  g_signal_pid: %d\n", g_signal_pid);
 }
