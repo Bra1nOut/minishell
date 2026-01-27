@@ -19,4 +19,4 @@ The shell itself
 <br>
 <br>
 <br>
-Made by M.L'hôte 🤝 L.Vincent
+Made by [M.L'hôte](https://github.com/Megamax21) 🤝 L.Vincent
